@@ -1,0 +1,23 @@
+{
+    "name": "pwa-integration-tests",
+    "version": "0.0.1",
+    "description": "Venia Integration Automation Tests",
+    "scripts": {
+        "clearCache:mac": "rm -rf ~/Library/Application\\ Support/Cypress/cy/*",
+        "test": "cypress open --browser chrome --config-file cypress.config.json",
+        "test:ci": "./run-tests",
+        "test:debug": "node --inspect-brk ./node_modules/cypress/bin/cypress run --browser chrome --config-file cypress.config.json",
+        "test:devTest": "jest",
+        "test:firefox": "cypress open --browser firefox --config-file cypress.config.json",
+        "test:headless": "./run-tests",
+        "test:run": "cypress run --browser chrome --config-file cypress.config.json"
+    },
+    "author": "Magento Commerce",
+    "license": "MIT",
+    "devDependencies": {
+        "cypress": "~7.1.0",
+        "cypress-image-snapshot": "~4.0.1",
+        "jest": "~26.0.1",
+        "jimp": "~0.16.1"
+    }
+}
